@@ -1,0 +1,123 @@
+@media (min-width: 1300px) {
+    .container {
+        width: 1300px;
+        margin: 0 auto 0 auto;
+    }
+    .form-custom .col-sm-6:first-child {
+        padding-right: 40px;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1299px) {
+    .container {
+        width: 1200px;
+        margin: 0 auto 0 auto;
+    }
+}
+/* Collapse Leftnav to icon menu in Middle Width */
+
+@media (max-width: 1199px) and (min-width: 768px) {
+    .leftnav,
+    .sidebar-nav,
+    .sidebar-nav .navbar {
+        background: transparent;
+    }
+    .leftnav {
+        z-index: 99;
+        opacity: 0.99;
+        width: 45px;
+        position: absolute;
+        margin-top: 0;
+        top: 20px;
+    }
+    .sidebar-nav {
+        position: absolute;
+        width: 45px;
+        .navbar {
+            .navbar-collapse {
+                border: none;
+            }
+            li {
+                width: 45px;
+                overflow: hidden;
+                .nav-text {
+                    opacity: 0;
+                }
+            }
+        }
+        &:hover {
+            width: 170px;
+            @include transition(width, 0.2s, ease-out);
+            li:hover {
+                opacity: 1;
+                width: 170px;
+                @include transition(width, 0.2s, ease-out);
+                .nav-text {
+                    opacity: 1;
+                }
+            }
+            li.active {
+                width: 45px;
+                &:hover {
+                    width: 170px;
+                    @include transition(none, 0, none);
+                }
+            }
+        }
+    }
+  
+    .content {
+        margin-left: 10px;
+        z-index: 10;
+    }
+    .logo {
+        position: relative;
+    }
+}
+
+@media (max-width: 767px) {
+    .content {
+        padding-left: 0;
+    }
+    .leftnav,
+    .sidebar-nav,
+    .sidebar-nav .navbar {
+        background: transparent;
+        z-index: 99999;
+        opacity: 0.99;
+        width: 170px;
+        position: absolute;
+        top: 0;
+    }
+    .leftnav {}
+    .sidebar-nav .navbar .navbar-collapse {
+        padding-top: 100px;
+    }
+    .logo {
+        width: 150px;
+        margin: auto;
+        position: relative;
+    }
+    .navbar {
+        min-height: 0;
+    }
+    .notify label {
+        text-align: left !Important;
+    }
+    .dashboard-nav {
+        margin-left: 40px;
+    }
+    .filter-link {
+        padding: 5px 10px;
+        background: #ededed;
+        color: #de4046;
+        display: inline-block;
+        font-weight: bold;
+        font-size: 12px;
+        cursor: pointer;
+    }
+    .filter-link.selected {
+        background: #de4046;
+        color: #fff;
+    }
+}

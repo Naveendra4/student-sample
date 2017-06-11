@@ -1,0 +1,52 @@
+.gu-mirror {
+  position: fixed !important;
+  margin: 0 !important;
+  z-index: 9999 !important;
+  opacity: 0.8;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  filter: alpha(opacity=80);
+}
+.gu-hide {
+  display: none !important;
+}
+.gu-unselectable {
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+}
+.gu-transit {
+  opacity: 0.2;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+  filter: alpha(opacity=20);
+}
+
+.dragbox {
+	padding: 10px;
+	background: #999;
+	min-height: 100px;
+}
+.dragbox.selectedModules {
+	background: #ccc;
+}
+.drag-item {
+padding: 5px 10px;
+background: #dedede;
+color: #de4046;
+font-weight: bold;
+margin: 8px 0;
+border: 1px solid #de4046;
+
+}
+.drag-item:hover {
+cursor: move; /* fallback if grab cursor is unsupported */
+    
+}
+.drag-item.gu-transit,
+.drag-item:active {
+cursor: move; /* fallback if grab cursor is unsupported */
+    
+}
+.drag-item:nth-child(even) {
+background: #fefefe;
+}

@@ -1,0 +1,84 @@
+body {
+    border-top: 80px solid #de4046;
+    padding: 0;
+    margin: 0;
+    background: #fff;
+    font-family: 'Roboto', 'Segoe UI', Arial, sans-serif;
+}
+
+.header {
+    margin-top: -80px;
+    height: 80px;
+}
+
+.content {
+    margin-top: 30px;
+    padding-left: 20px;
+}
+
+.btn-custom {
+    color: $color-inverse;
+    padding: 8px 30px;
+    font-size: 13px;
+    border: 0;
+    border-radius: 3px;
+    font-weight: 300;
+    &.btn-primary {
+        background: $color-primary;
+    }
+    &.btn-cancel {
+        background: $color-cancel;
+    }
+}
+
+form .glyphicon,
+form .dropdown-toggle {
+    cursor: pointer;
+    color: $color-primary;
+    &:hover {
+        color: darken($color-primary, 10%);
+    }
+}
+
+.bootstrap-dialog .modal-dialog {
+    .modal-header {
+        background-color: $color-primary;
+    }
+    .table td {
+        word-wrap: break-word;
+    }
+}
+#edit-options .modal-body {
+    text-align: center;
+}
+
+.btn {
+    color: $color-inverse !important;
+    padding: 8px 30px;
+    font-size: 13px;
+    border: 0;
+    border-radius: 3px;
+    font-weight: 300;
+    &.btn-success,
+    &.btn-primary {
+        background-color: $color-primary !important;
+    }
+    &.btn-default {
+        background: $color-cancel;
+    }
+    &.btn-file {
+        padding: 8px !important;
+    }
+}
+
+.align-left {
+    text-align: left !important;
+}
+
+
+
+
+
+
+
+ 

@@ -1,0 +1,166 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Mar 7, 2016, 3:01:30 PM
+    Author     : user
+*/
+
+.report-table {
+    margin-bottom: 15px !important;
+    border: 1px solid black;
+    color: black;
+    width: 100%;
+}
+
+.report-table td,tr {
+    border: 1px solid black;
+    color: black;
+    padding: 6px;
+}
+
+.report-under {
+    margin: 40px 0;
+}
+.report-signature {
+    padding-top: 80px;
+}
+.signature  {
+    text-align: center !important;
+    border-top: 1px dashed #999;
+    display: block;
+    margin: auto;
+    width: 80%;
+}
+
+#loading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+    background: rgba(255, 255, 255, 0.7);
+}
+#loading img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -80px;
+    z-index: 99;
+}
+
+/*.report-table thead tr:first-child{
+    text-align: center;
+    font-weight: bold;
+}*/
+.tbl-legend th {
+    text-align: center;
+    font-size: 12px;
+
+}
+.tbl-subject {
+    text-transform: uppercase;
+    background: #efefef;
+}
+.tbl-module {
+    font-size: 13px;
+}
+.tbl-section {
+    width: 400px;
+    font-weight: 400;
+}
+.mark {
+    position: relative;
+    width: 30px;
+    height: 120px;
+}
+.mark span {
+    transform: rotate(-90deg);
+    transform-origin: left bottom 0;
+    margin-left: 30px;
+    position: absolute;
+    bottom: 10px;
+    left: -5px;
+    display: block;
+    width: 120px;
+    font-size: 12px;
+    line-height: 11px;
+}
+.tbl-comments textarea {
+    width: 100%;
+    height: 100px;
+}
+
+td.description {
+    font-size: 15px;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.tbl-color1 {
+    background: #ff5050 !important;
+    box-shadow: inset 0 0 0 1000px #ff5050 !important;
+    -webkit-print-color-adjust: exact; 
+}
+.tbl-color2 {
+    background: #00b0f0 !important;
+    box-shadow: inset 0 0 0 1000px #00b0f0 !important;
+    -webkit-print-color-adjust: exact; 
+}
+
+
+@media print {
+/*    a[href]:after {
+        content: none !important;
+    }*/
+    a[href]:after {
+        content: " " !important;
+    }
+    .tbl-color1 {
+        background: #ff5050 !important;
+        box-shadow: inset 0 0 0 1000px #ff5050 !important;
+        -webkit-print-color-adjust: exact; 
+    }
+    .tbl-color2 {
+        background: #00b0f0 !important;
+        box-shadow: inset 0 0 0 1000px #00b0f0 !important;
+        -webkit-print-color-adjust: exact; 
+    }
+    .content {
+        position: relative;
+        margin-top: 0;
+        padding-left: 0;
+    }
+    .leftnav, .user-login, .user-functions, #welcome {
+        display: none;
+    }
+    body * {
+        visibility: hidden;
+    }
+    .section-to-print, .section-to-print *, .wr-logo * {
+        visibility: visible;
+    }
+    .section-to-print {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 38px;
+    }
+
+    body {
+        position: relative;
+    }
+    .hide-print {
+        display: none;
+    }
+    .break {
+        page-break-after: always;
+    }
+    .report-under {
+        page-break-before: always;
+        margin-top: 120px;
+    }  
+}

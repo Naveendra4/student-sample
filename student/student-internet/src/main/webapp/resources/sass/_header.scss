@@ -1,0 +1,90 @@
+.logo {	
+	height: 80px;
+	z-index: 999;
+	position: relative;
+	width: 180px;
+    display: table-cell;
+	text-align: center;
+    vertical-align: middle;
+}
+/* USER FUNCTIONS */
+
+.user-functions {
+	margin-top: 10px;
+	padding: 10px 0 10px 0;
+}
+.user-login {
+	cursor: pointer;
+	width: 45px;
+	float: right;
+	text-align: right;
+	font-size: 1em;
+	margin: -10px 0px 0 0;
+	color: #fff;
+}
+.user-name {
+	color: #de4046;
+	font-size: 13px;
+	font-weight: 600;
+}
+.btn-settings, .btn-notifications {
+	float: right;
+	margin: 8px 10px 0 15px;
+	line-height: 30px;
+	color: #fff;
+	font-size: 20px;
+}
+.btn-file {
+	background-color: #777 !important;
+	padding: 6px 12px 7px 12px;
+}
+.dropdown-toggle:hover, .glyphicon:hover {
+	color: #f1f1f1;
+	cursor: pointer;
+}
+/* Search Box */
+.header .searchbox {
+	margin-top: 3px;
+	width: 5px;
+	float: right;
+}
+.header .searchbox .search {
+	width: 40px;
+	border: none;
+	position: absolute;
+	right: 0;
+	background: none;
+	z-index: 888;
+	box-shadow: none;
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+	color: transparent;
+	cursor: pointer;
+}
+.searchbox button.btn {
+	background: none;
+	border: none;
+	padding: 6px 10px 2px 10px;
+	position: absolute;
+    right: 0;
+	z-index: 777;
+}
+.header .searchbox .glyphicon {
+	color: #fff;
+	font-size: 20px;
+	font-weight: light;
+}
+.header .searchbox .search:focus {
+	width: 200px;
+	background: #c44046;
+	opacity: 0.7;
+	border-width: 0px;
+	outline: none;
+	box-shadow: none;
+	border-radius: 3px;
+	padding-right: 38px;
+	color: #fff;
+	cursor: text;
+}

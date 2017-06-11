@@ -1,0 +1,19 @@
+//Primary THEME
+$color-primary: #de4046;
+$color-accent: #666;
+$color-inverse: #fff;
+$color-secondary: #000;
+$color-bg: #fff;
+$color-cancel: #818181;
+
+@mixin reset {
+    padding: 0;
+    margin: 0;
+}
+
+@mixin transition($attr, $time, $effect) {
+   -webkit-transition: $attr $time $effect;
+	-moz-transition: $attr $time $effect;
+	-o-transition: $attr $time $effect;
+	transition: $attr $time $effect;
+}

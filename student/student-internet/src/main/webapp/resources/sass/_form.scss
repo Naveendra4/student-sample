@@ -1,0 +1,198 @@
+.form-heading {
+    color: $color-primary;
+    font-weight: 700;
+    font-size: 17px;
+    text-align: left;
+    margin: 0 0 20px 0;
+    padding: 0;
+}
+
+.form-subheading {
+    color: $color-secondary;
+    font-weight: 700;
+    font-size: 17px;
+    text-align: left;
+    margin: 0 0 20px 0;
+    padding: 0;
+}
+
+.subheading {
+    font-size: 15px;
+    color: #999;
+    font-weight: 300;
+    margin-top: -15px;
+}
+/* CUSTOM FORM STYLES */
+
+.form-custom {
+    label.control-label {
+        color: $color-accent;
+        font-weight: 600;
+        font-size: 11px;
+        text-align: right;
+        padding-right: 0;
+        margin-top: 3px;
+        &.radio {
+            display: inline-block;
+            float: left;
+            margin: -4px -5px -15px 0;
+        }
+        &.checkbox {
+            display: inline-block;
+            float: left;
+            margin: -4px -5px -15px 0;
+        }
+        &.has-sub {
+            @include reset;
+            .sub-label {
+                color: lighten($color-accent, 10%);
+                font-size: 0.857em;
+            }
+        }
+    }
+    .form-control {
+        color: lighten($color-secondary, 10%);
+        font-weight: 400;
+        font-size: 13px;
+        min-height: 35px;
+        border: 1px solid lighten($color-secondary, 60%);
+        border-radius: 8px;
+        background: #fff;
+    }
+    input[type="radio"] {
+        margin: 5px 0 0 0;
+    }
+    input[type="checkbox"] {
+        margin: -2px 0 0 0;
+    }
+    .file-drop-zone-title {
+        font-size: 20px !important;
+    }
+}
+
+.checkbox-list {
+    display: inline-block;
+    label.checkbox {
+        text-align: left;
+    }
+    input[type="checkbox"] {
+        width: 15px;
+        height: 15px;
+    }
+}
+
+
+.dropdown-menu > .active > a, 
+.dropdown-menu > .active > a:hover, 
+.dropdown-menu > .active > a:focus {
+    background: $color-primary;
+    
+}
+
+
+.form-section {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 3px solid $color-primary;
+}
+
+.inner-form-group {
+    display: inline-block;
+    label.control-label {
+        @include reset;
+    }
+}
+
+.notify {
+    float: left;
+}
+/* FORM SECTION NAVIGATION */
+
+#section-nav {
+    @include reset;
+    list-style: none;
+    display: inline-block;
+    margin-bottom: 50px;
+    li {
+        display: table-row;
+        float: left;
+        text-align: center;
+        margin: 0 1px 1px 0;
+        a {
+            display: inline-block;
+            font-size: 12px;
+            border: 1px solid darken($color-bg, 20%);
+            border-radius: 12px;
+            height: 48px;
+            padding: 5px;
+            width: 90px;
+            display: table-cell;
+            vertical-align: middle;
+            color: $color-secondary;
+            font-weight: 500;
+        }
+    }
+}
+
+.form-table {
+    a {
+        margin-left: 15px;
+        > i.glyphicon {
+            color: $color-primary;
+            &:hover {
+                color: darken($color-primary, 20%);
+            }
+        }
+    }
+}
+.select-table{
+	thead{
+		background-color:  $color-primary;
+		tr{
+			th{
+				padding: 10px 10px;
+			}
+		}
+	}
+	tbody{
+		tr{
+			td:nth-child(2){
+				width: 25%;
+				text-align: center;
+			}
+		}
+	}
+}
+
+#section-nav li:hover a,
+#section-nav li a.current {
+    background: $color-primary;
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.btn-wrapper {
+    margin-top: 40px;
+}
+.panel {
+    border-radius: 0;
+    border: 1px solid $color-primary;
+    margin: 20px 0;
+    .panel-heading {
+        background: $color-primary;
+        border-radius: 0;
+        color: $color-inverse;
+        .panel-title {
+            font-size: 14px;
+        }
+    }
+    .panel-body {
+        padding: 20px;
+    }
+}
+.add-module,
+.remove-module {
+    margin-top: 7px;
+    display: inline-block;
+}
