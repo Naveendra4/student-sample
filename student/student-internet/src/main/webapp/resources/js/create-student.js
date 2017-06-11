@@ -122,13 +122,6 @@ addBtn.click(function () {
         focusInvalid();
     }
 
-
-
-
-
-
-
-
 });
 clearBtn.click(function () {
 
@@ -266,6 +259,8 @@ window.operateEvents = {
         });
     }
 };
+
+
 function checkStatus(gatheredData, msg) {
 
     if (msg === "Update") {
@@ -282,7 +277,6 @@ function checkStatus(gatheredData, msg) {
     }
 
 }
-
 
 $('#admission').datepicker({
     autoclose: true,
