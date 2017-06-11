@@ -167,6 +167,20 @@ function operateFormatter(value, row, index) {
     ].join('');
 }
 
+$('#admission').datepicker({
+    autoclose: true,
+    startView: 3,
+    fomat: 'MM/dd/yyyy',
+    forceParse: true
+});
+
+$('#dob').datepicker({
+    autoclose: true,
+    startView: 3,
+    fomat: 'MM/dd/yyyy',
+    forceParse: true
+});
+
 //##########manual serialize #####################
 function manualSerialize(data) {
     var objectItem = {};
