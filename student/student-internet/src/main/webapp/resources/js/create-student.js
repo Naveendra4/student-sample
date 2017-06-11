@@ -6,7 +6,7 @@ var readUrl = "student/findAll";
 
 var clearBtn = $("#clear");
 var addBtn = $("#add");
-
+var token = "";
 
 //#############################
 //INITIALIZATION
@@ -139,6 +139,7 @@ function saveData(url, type, data) {
         url: url,
         async: false,
         headers: {
+            'X-CSRF-TOKEN': token
         },
         data: data,
         success: function (data) {
@@ -163,7 +164,7 @@ function ajaxDataAll(url, type) {
         url: url,
         async: false,
         headers: {
-        
+         'X-CSRF-TOKEN': token
         },
         success: function (data) {
             returnData = data;

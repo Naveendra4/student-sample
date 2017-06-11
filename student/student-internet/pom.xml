@@ -20,6 +20,7 @@
         <spring.version>3.2.3.RELEASE</spring.version>
         <spring.security.version>3.2.3.RELEASE</spring.security.version>
         <jstl.version>1.2</jstl.version>
+        <jackson.version>1.9.10</jackson.version>
         <taglib.standard.version>1.1.2</taglib.standard.version>
     </properties>
     
@@ -133,7 +134,14 @@
             <version>2.1</version>
             <type>jar</type>
         </dependency>
-          <dependency>
+        <!-- Jackson JSON Mapper -->
+        <dependency>
+            <groupId>org.codehaus.jackson</groupId>
+            <artifactId>jackson-mapper-asl</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+
+        <dependency>
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
             <version>1.7.1</version>
