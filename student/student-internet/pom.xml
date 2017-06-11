@@ -80,7 +80,6 @@
             <version>${spring.security.version}</version>
             <type>jar</type>
         </dependency>
-
         <!-- ################################### -->
         <!-- JSTL DEPENDANCIES -->
         <!-- ################################### -->
@@ -103,14 +102,11 @@
         <!-- ################################### -->
         <!-- APACHE DEPENDANCIES -->
         <!-- ################################### -->
-
         <dependency>
             <groupId>commons-beanutils</groupId>
             <artifactId>commons-beanutils</artifactId>
             <version>1.8.3</version>
         </dependency>
-
-
         <dependency>
             <groupId>commons-codec</groupId>
             <artifactId>commons-codec</artifactId>
@@ -130,6 +126,12 @@
             <groupId>${project.groupId}</groupId>
             <artifactId>student-core</artifactId>
             <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>joda-time</groupId>
+            <artifactId>joda-time</artifactId>
+            <version>2.1</version>
+            <type>jar</type>
         </dependency>
     </dependencies>   
 

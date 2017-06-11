@@ -8,6 +8,7 @@ package com.test.student.internet;
 
 import com.test.student.core.service.StudentService;
 import com.test.student.internet.navigation.NavigationPath;
+import com.test.student.internet.util.DateUtil;
 import com.test.student.internet.util.StudentJsonUtil;
 import com.test.student.model.json.JsonReturn;
 import com.test.student.model.json.StudnetJson;
@@ -15,6 +16,7 @@ import com.test.student.model.Student;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Locale;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -80,14 +82,14 @@ public class StudentController {
 
             Student student = new Student();
 
-            student.setAdmissionDate(convertStringToDate(admission));
+            student.setAdmissionDate(DateUtil.stringToDate(admission, DateUtil.Formats.DEFAULTDATE));
             student.setStudentId(studentId);
             student.setGender(gender);
             student.setEnrolledStatus(isEndrolled);
             student.setFirstName(firstName);
             student.setMiddleName(middleName);
             student.setLastName(lastName);
-            student.setDob(convertStringToDate(dateOfBirth));
+            student.setDob(DateUtil.stringToDate(dateOfBirth, DateUtil.Formats.DEFAULTDATE));
             student.setAddress(personalAddress);
             student.setContact(contact);
             student.setDiscription(description);
@@ -155,7 +157,7 @@ public class StudentController {
      * @throws ParseException
      */
     private Date convertStringToDate(String dateString) throws ParseException {
-        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MMM-dd");
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MMM-dd",Locale.ENGLISH);
         Date date = formatter.parse(dateString);
         return date;
     }

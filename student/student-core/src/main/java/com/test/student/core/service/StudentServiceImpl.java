@@ -4,19 +4,19 @@ import com.test.student.core.dao.StudentDao;
 import com.test.student.model.Student;
 import java.util.List;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
-@Transactional
 public class StudentServiceImpl implements StudentService {
 
     @Autowired
     private StudentDao studentDao;
 
     @Override
+    @Transactional
     public void addStudent(Student student) {
 
         studentDao.create(student);
@@ -40,6 +40,7 @@ public class StudentServiceImpl implements StudentService {
     }
 
     @Override
+    @Transactional
     public void deleteStudent(Student student) {
         
         studentDao.delete(student);
