@@ -5,8 +5,8 @@ import com.test.student.model.Student;
 import java.util.List;
 import org.springframework.stereotype.Service;
 
-
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 @Service
@@ -42,9 +42,15 @@ public class StudentServiceImpl implements StudentService {
     @Override
     @Transactional
     public void deleteStudent(Student student) {
-        
+
         studentDao.delete(student);
 
+    }
+
+    @Override
+    @Transactional
+    public void updateStudent(Student student) {
+        studentDao.update(student);
     }
 
 }
