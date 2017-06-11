@@ -1,11 +1,12 @@
 package com.test.student.core.service;
 
 import com.test.student.core.dao.StudentDao;
+import com.test.student.model.Student;
 import java.util.List;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.test.student.modal.Student;
+
 import org.springframework.beans.factory.annotation.Autowired;
 
 @Service

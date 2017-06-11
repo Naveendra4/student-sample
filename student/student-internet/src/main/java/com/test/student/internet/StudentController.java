@@ -5,12 +5,13 @@
  */
 package com.test.student.internet;
 
+
 import com.test.student.core.service.StudentService;
 import com.test.student.internet.navigation.NavigationPath;
 import com.test.student.internet.util.StudentJsonUtil;
-import com.test.student.modal.Student;
-import com.test.student.modal.json.JsonReturn;
-import com.test.student.modal.json.StudnetJson;
+import com.test.student.model.json.JsonReturn;
+import com.test.student.model.json.StudnetJson;
+import com.test.student.model.Student;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -126,7 +127,7 @@ public class StudentController {
      * @param studentId
      * @return
      */
-    @RequestMapping(value = "/find/studentId", method = RequestMethod.GET, headers = "Accept=application/json")
+    @RequestMapping(value = "/delete/studentId", method = RequestMethod.GET, headers = "Accept=application/json")
     @ResponseBody
     public JsonReturn deleteByStudentId(@RequestParam(value = "studentId", required = true) String studentId) {
         JsonReturn jsonReturn = new JsonReturn();

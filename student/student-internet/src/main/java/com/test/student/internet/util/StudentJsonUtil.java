@@ -5,8 +5,9 @@
  */
 package com.test.student.internet.util;
 
-import com.test.student.modal.Student;
-import com.test.student.modal.json.StudnetJson;
+
+import com.test.student.model.Student;
+import com.test.student.model.json.StudnetJson;
 import java.text.Format;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -19,7 +20,11 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class StudentJsonUtil {
-
+   /**
+    * convert student object to json model
+    * @param student
+    * @return 
+    */
     public StudnetJson toJson(Student student) {
 
         StudnetJson studentJson = new StudnetJson();
@@ -43,7 +48,8 @@ public class StudentJsonUtil {
     }
 
     /**
-     *
+     *covert date to string 
+     * 
      * @param dateString
      * @return
      * @throws ParseException

@@ -5,7 +5,8 @@
  */
 package com.test.student.core.dao;
 
-import com.test.student.modal.Student;
+import com.test.student.model.Student;
+
 
 /**
  *

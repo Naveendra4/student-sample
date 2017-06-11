@@ -6,7 +6,7 @@
         <artifactId>student</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-    <artifactId>student-modal</artifactId>
+    <artifactId>student-model</artifactId>
     <packaging>jar</packaging>
     <properties>
         <maven.compiler.source>1.7</maven.compiler.source>
@@ -46,5 +46,5 @@
                 <type>jar</type>
             </dependency>
         </dependencies>
-    
+    <name>student-model</name>
 </project>

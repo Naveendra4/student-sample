@@ -6,7 +6,8 @@
 package com.test.student.core.dao.impl;
 
 import com.test.student.core.dao.StudentDao;
-import com.test.student.modal.Student;
+import com.test.student.model.Student;
+
 import org.springframework.stereotype.Component;
 
 /**

@@ -10,7 +10,7 @@
     </properties>
   <modules>
     <module>student-internet</module>
-    <module>student-modal</module>
     <module>student-core</module>
+    <module>student-model</module>
   </modules>
 </project>

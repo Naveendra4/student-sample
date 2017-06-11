@@ -1,6 +1,7 @@
 package com.test.student.core.service;
 
-import com.test.student.modal.Student;
+
+import com.test.student.model.Student;
 import java.util.List;
 
 /**

@@ -122,16 +122,14 @@
             <version>3.2.1</version>
         </dependency>
         <dependency>
-            <groupId>com.test</groupId>
-            <artifactId>student-modal</artifactId>
-            <version>1.0-SNAPSHOT</version>
-            <type>jar</type>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>student-model</artifactId>
+            <version>${project.version}</version>
         </dependency>
         <dependency>
-            <groupId>com.test</groupId>
+            <groupId>${project.groupId}</groupId>
             <artifactId>student-core</artifactId>
-            <version>1.0-SNAPSHOT</version>
-            <type>jar</type>
+            <version>${project.version}</version>
         </dependency>
     </dependencies>   
 
