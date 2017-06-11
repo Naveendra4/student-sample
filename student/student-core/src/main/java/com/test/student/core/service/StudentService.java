@@ -1,6 +1,5 @@
 package com.test.student.core.service;
 
-
 import com.test.student.model.Student;
 import java.util.List;
 
@@ -34,4 +33,10 @@ public interface StudentService {
      * @param student
      */
     public void deleteStudent(Student student);
+
+    /**
+     *
+     * @param student
+     */
+    public void updateStudent(Student student);
 }
