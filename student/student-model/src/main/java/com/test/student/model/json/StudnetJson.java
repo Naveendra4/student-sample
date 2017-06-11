@@ -15,6 +15,7 @@ public class StudnetJson {
     private String admissionDate;
     private String gender;
     private String enrolledStatus;
+    private String fullName;
     private String firstName;
     private String middleName;
     private String lastName;
@@ -175,6 +176,20 @@ public class StudnetJson {
      */
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    /**
+     * @return the fullName
+     */
+    public String getFullName() {
+        return fullName;
+    }
+
+    /**
+     * @param fullName the fullName to set
+     */
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
     }
 
 }

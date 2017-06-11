@@ -11,6 +11,7 @@ public class NavigationPath {
     //##################################
     public static final String STUDENT = "/student";
     public static final String STUDENT_CREATE = "/student/create";
-   
+    public static final String STUDENT_FINDALL ="/findAll";
+    
 
 }

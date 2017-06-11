@@ -5,7 +5,6 @@
  */
 package com.test.student.internet;
 
-
 import com.test.student.core.service.StudentService;
 import com.test.student.internet.navigation.NavigationPath;
 import com.test.student.internet.util.DateUtil;
@@ -16,6 +15,7 @@ import com.test.student.model.Student;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 import java.util.Locale;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -151,15 +151,16 @@ public class StudentController {
     }
 
     /**
-     *
-     * @param dateString
-     * @return
-     * @throws ParseException
+     * 
+     * @return 
      */
-    private Date convertStringToDate(String dateString) throws ParseException {
-        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MMM-dd",Locale.ENGLISH);
-        Date date = formatter.parse(dateString);
-        return date;
+    @RequestMapping(value = NavigationPath.STUDENT_FINDALL, method = RequestMethod.GET, headers = "Accept=application/json")
+    @ResponseBody
+    public List<StudnetJson> findAll() {
+
+        List<Student> student = studentService.listStudent();
+        return studentJsonUtil.toJsonLsit(student);
+
     }
 
 }

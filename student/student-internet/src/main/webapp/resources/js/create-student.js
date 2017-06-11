@@ -2,6 +2,7 @@
 // VARIABLES
 // #############################
 var saveUrl = "student/create";
+var readUrl = "/findAll";
 
 var clearBtn = $("#clear");
 var addBtn = $("#add");
@@ -34,7 +35,7 @@ function initTable() {
                 valign: 'bottom',
                 sortable: true
             }, {
-                field: 'studentName',
+                field: 'fullName',
                 title: 'Student Name',
                 class: "wordbreak",
                 align: 'left',
@@ -58,12 +59,13 @@ function initTable() {
 $(document).ready(function () {
     //intilizing table
     initTable();
+    loadData();
 });
 
 
 function loadData() {
     //Loads from database
-    data = ajaxDataAll(readUrl, "GET", token);
+    data = ajaxDataAll(readUrl, "GET");
     //Loading database data to bootstrap table
     table.bootstrapTable('load', data);
 
@@ -150,6 +152,27 @@ function saveData(url, type, data) {
             alert("Failed to load ");
         }
     });
+}
+
+
+function ajaxDataAll(url, type) {
+    var returnData = null;
+    $.ajax({
+        type: type,
+        url: url,
+        async: false,
+        headers: {
+        
+        },
+        success: function (data) {
+            returnData = data;
+        },
+        error: function () {
+            alert("Failed to load ");
+        }
+    });
+
+    return	returnData;
 }
 
 
