@@ -29,24 +29,46 @@ public class StudentJsonUtil {
         StudnetJson studentJson = new StudnetJson();
 
         studentJson.setStudentId(student.getStudentId());
-        studentJson.setFullName(student.getFirstName() + "" + student.getMiddleName() + "" + student.getLastName());
-        studentJson.setAdmissionDate(DateUtil.dateToString(student.getAdmissionDate(), DateUtil.Formats.DEFAULTDATE));
+        studentJson.setFullName(student.getFirstName() + " " + student.getLastName());
+
+        if (null != student.getAdmissionDate()) {
+            studentJson.setAdmissionDate(DateUtil.dateToString(student.getAdmissionDate(), DateUtil.Formats.DEFAULTDATE));
+        }
+
         studentJson.setGender(student.getGender());
         studentJson.setEnrolledStatus(student.getEnrolledStatus());
         studentJson.setFirstName(student.getFirstName());
-        studentJson.setMiddleName(student.getMiddleName());
+
+        if (null != student.getMiddleName()) {
+            studentJson.setMiddleName(student.getMiddleName());
+        }
+
         studentJson.setLastName(student.getLastName());
-        studentJson.setDob(DateUtil.dateToString(student.getDob(), DateUtil.Formats.DEFAULTDATE));
-        studentJson.setAddress(student.getAddress());
-        studentJson.setContact(student.getContact());
-        studentJson.setDescription(student.getDiscription());
+
+        if (null != student.getDob()) {
+            studentJson.setDob(DateUtil.dateToString(student.getDob(), DateUtil.Formats.DEFAULTDATE));
+        }
+
+        if (null != student.getAddress()) {
+            studentJson.setAddress(student.getAddress());
+        }
+
+        if (null != student.getContact()) {
+            studentJson.setContact(student.getContact());
+        }
+
+        if (null != student.getDiscription()) {
+            studentJson.setDescription(student.getDiscription());
+        }
 
         return studentJson;
     }
+
     /**
      * convert to student json list
+     *
      * @param student
-     * @return 
+     * @return
      */
     public List<StudnetJson> toJsonLsit(List<Student> student) {
 

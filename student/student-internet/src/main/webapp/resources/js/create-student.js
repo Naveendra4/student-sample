@@ -118,15 +118,21 @@ function getData() {
 //EVENTS
 //#############################
 addBtn.click(function () {
-  
-    var gatheredData = getData();
-    serializedData = manualSerialize(gatheredData);
-    saveData(saveUrl, "POST", serializedData);
+
+    if (isValidStudent()) {
+        var gatheredData = getData();
+        serializedData = manualSerialize(gatheredData);
+        saveData(saveUrl, "POST", serializedData);
+    } else {
+        focusInvalid();
+    }
+
+
 
 });
 
 clearBtn.click(function () {
-
+    validator.resetForm();
 
 });
 
@@ -164,7 +170,7 @@ function ajaxDataAll(url, type) {
         url: url,
         async: false,
         headers: {
-         'X-CSRF-TOKEN': token
+            'X-CSRF-TOKEN': token
         },
         success: function (data) {
             returnData = data;
@@ -192,6 +198,7 @@ function operateFormatter(value, row, index) {
     ].join('');
 }
 
+
 $('#admission').datepicker({
     autoclose: true,
     startView: 3,
@@ -199,11 +206,22 @@ $('#admission').datepicker({
     forceParse: true
 });
 
+$("#admission").change(function () {
+    var validator = $("#form-student-details").validate();
+    validator.element("#admission");
+});
+
 $('#dob').datepicker({
     autoclose: true,
     startView: 3,
     fomat: 'MM/dd/yyyy',
     forceParse: true
+});
+
+
+$("#dob").change(function () {
+    var validator = $("#form-student-details").validate();
+    validator.element("#dob");
 });
 
 //##########manual serialize #####################

@@ -18,7 +18,7 @@
     }
 </style>
 <script>
-    document.title = "MISY Myanmar International School - Subject Form";
+    document.title = "Student Form";
 </script>
 
 
@@ -29,7 +29,7 @@
     </div>
 </div>
 
-<form class="form-horizontal form-custom" id="form-module-details" role="form">
+<form class="form-horizontal form-custom" id="form-student-details" role="form">
     <div class="row">
         <div class="col-sm-6">
             <div class="form-section">
@@ -51,7 +51,7 @@
 
 
                 <div class="form-group">
-                    <label class="control-label col-sm-2 col-md-3"
+                    <label class="control-label col-sm-2 col-md-3 is-required"
                            for="ref-no">Student Number</label>
                     <div class="col-sm-10 col-md-9">
                         <input type="text" class="form-control stringNumberValClass other" maxlength="30"
@@ -61,7 +61,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label class="control-label col-sm-2 col-md-3 is-required"
+                    <label class="control-label col-sm-2 col-md-3"
                            for="gender">gender</label>
                     <div class="col-sm-10 col-md-9">
                         <select class="form-control other" id="gender" name="gender">
@@ -72,7 +72,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label class="control-label col-sm-2 col-md-3 is-required"
+                    <label class="control-label col-sm-2 col-md-3 "
                            for="is-enrolled">Enrolment Status</label>
                     <div class="col-sm-10 col-md-9">
                         <select class="form-control other" id="is-enrolled" name="is-enrolled"
@@ -124,7 +124,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label class="control-label col-sm-3 is-required" for="add1">Street
+                    <label class="control-label col-sm-3 " for="add1">Street
                         Address 1</label>
                     <div class="col-sm-9">
                         <input type="text" class="form-control other" id="personal-add1"
@@ -133,7 +133,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label class="control-label col-sm-3 is-required"
+                    <label class="control-label col-sm-3 "
                            for="phone-number">Mobile Number 1</label>
                     <div class="col-sm-9">
                         <input type="text" class="form-control  tpnumberValClass other" id="contact-1"
@@ -175,6 +175,7 @@
 </div>
 <!-- ############# /CONTENT ############# -->
 <%@include file="template/main/footer.jsp"%>
+<script src="${pageContext.servletContext.contextPath}/resources/js/validation/create-student-validation.js"></script>
 <script src="${pageContext.servletContext.contextPath}/resources/js/create-student.js"></script>
 
 
