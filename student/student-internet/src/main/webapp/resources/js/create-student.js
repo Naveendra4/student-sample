@@ -2,7 +2,7 @@
 // VARIABLES
 // #############################
 var saveUrl = "student/create";
-var readUrl = "/findAll";
+var readUrl = "student/findAll";
 
 var clearBtn = $("#clear");
 var addBtn = $("#add");
@@ -66,6 +66,7 @@ $(document).ready(function () {
 function loadData() {
     //Loads from database
     data = ajaxDataAll(readUrl, "GET");
+    console.log(data);
     //Loading database data to bootstrap table
     table.bootstrapTable('load', data);
 
